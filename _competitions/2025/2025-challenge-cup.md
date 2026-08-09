@@ -5,10 +5,10 @@ date: "2025-11-01"
 selected: true
 
 competition: "“挑战杯”全国大学生课外学术科技作品竞赛"
-level: "National"
+level: "National Competition"
 award: "一等奖"
 
-project: "“土”故纳新，循废焕壤：减污增效背景下土壤生态改良困局与策略——基于11省市996户农户的调研"
+project: "“土”故纳新，循废焕壤：减污增效背景下土壤生态改良困局与策略—基于11省市996户农户的调研"
 
 role: "Core Team Member"
 
