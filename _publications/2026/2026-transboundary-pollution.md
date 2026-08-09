@@ -15,8 +15,6 @@ authors:
   - X. Luo
 
 links:
-  Paper: https://doi.org/10.3389/fenvs.2026.1857944
 
----
   Paper: [https://doi.org/10.1016/j.isprsjprs.2026.03.049](https://doi.org/10.3389/fenvs.2026.1857944)
 ---
