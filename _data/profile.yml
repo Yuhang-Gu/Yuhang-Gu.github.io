@@ -1,6 +1,6 @@
 primary_name: "Yuhang"
 secondary_name: "Gu"
-navbar_name: "Yuhang Gu"
+navbar_name: "Homepage"
 
 positions:
 - name: Undergraduate Student, Tianjin University of Science and Technology
@@ -11,20 +11,19 @@ cv_link: /assets/CV/cv.pdf
 
 # Google Scholar ID
 # 等你有自己的 Google Scholar 主页后再填写
-# gscholar: YOUR_GOOGLE_SCHOLAR_ID
-
+gscholar: ibLy1ZYAAAAJ
 github: Yuhang-Gu
 
 # 以下账号尚未确认，不要保留 Jasper 的信息
 # twitter:
 # linkedin:
-# orcid:
-# xiaohongshu:
+orcid: 0009-0000-9450-2519
+xiaohongshu: https://www.xiaohongshu.com/user/profile/636a60e9000000001f01968b
 
 # 如果以后上传自己的微信二维码，可以保留
-# wechat_qrcode: /assets/images/etc/wechat.jpg
-# wechat_prompt: >-
-#   Please tell me your name, affiliation, and reason for contacting me. Thanks!
+wechat_qrcode: /assets/images/etc/wechat.jpg
+wechat_prompt: >-
+ Please tell me your name, affiliation, and reason for contacting me. Thanks!
 
 
 short_bio_text_justify: true
