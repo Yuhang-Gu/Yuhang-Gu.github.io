@@ -42,42 +42,48 @@ navbar_title: Home
 </div>
 {% endif %}
 
-{% assign selected_competitions = site.competitions
-   | sort: "date"
-   | reverse
-   | where: "selected", true %}
+{% if site.data.display.homepage.show_selected_competitions %}
 
-{% if selected_competitions.size > 0 %}
-<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    {% assign selected_competitions = site.competitions
+       | sort: "date"
+       | reverse
+       | where: "selected", true %}
 
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        <i class="fas fa-trophy"></i>
-        Selected Academic Competitions
+    {% if selected_competitions.size > 0 %}
 
-        <a href="{{ 'competitions' | relative_url }}">
-            (view all <i class="fas fa-angle-double-right"></i>)
-        </a>
-    </h6>
+    <div class="my-3 p-0 bg-white shadow-sm rounded-sm">
 
-    {% for item in selected_competitions limit: 3 %}
+        <h6 class="border-bottom border-gray p-3 mb-0">
+            <i class="fas fa-trophy"></i>
+            Selected Academic Competitions
 
-        {% assign is_last = forloop.last %}
+            <a href="{{ 'competitions' | relative_url }}">
+                (view all <i class="fas fa-angle-double-right"></i>)
+            </a>
+        </h6>
 
-        {% include widgets/competition_item.html
-            item=item
-            hide_bottom_border=is_last
-        %}
+        {% for item in selected_competitions limit: 3 %}
 
-    {% endfor %}
+            {% assign is_last = forloop.last %}
 
-    <h6 class="d-block p-3 mt-0 text-right">
-        <a href="{{ 'competitions' | relative_url }}">
-            All competitions
-            <i class="fas fa-angle-double-right"></i>
-        </a>
-    </h6>
+            {% include widgets/competition_item.html
+                item=item
+                hide_bottom_border=is_last
+            %}
 
-</div>
+        {% endfor %}
+
+        <h6 class="d-block p-3 mt-0 text-right">
+            <a href="{{ 'competitions' | relative_url }}">
+                All competitions
+                <i class="fas fa-angle-double-right"></i>
+            </a>
+        </h6>
+
+    </div>
+
+    {% endif %}
+
 {% endif %}
 
 {% assign showcase_items = site.showcase | sort: "date" | reverse | where: "show", true | where: "group", "Not Just Research" %}
