@@ -7,14 +7,15 @@ positions:
 
 email: "23080303@mail.tust.edu.cn"
 
-cv_link: /assets/CV/cv.pdf
+# Add a CV link after uploading Yuhang Gu's current CV.
+# cv_link: /assets/CV/cv.pdf
 
 # Google Scholar ID
 # 等你有自己的 Google Scholar 主页后再填写
 gscholar: ibLy1ZYAAAAJ
 github: Yuhang-Gu
 
-# 以下账号尚未确认，不要保留 Jasper 的信息
+# Optional social profiles
 # twitter:
 # linkedin:
 orcid: 0009-0000-9450-2519
