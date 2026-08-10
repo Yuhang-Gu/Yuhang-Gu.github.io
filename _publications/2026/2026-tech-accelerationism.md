@@ -1,7 +1,7 @@
 ---
 title: "“技术右翼”与美国创新范式演变：动因、取向与逻辑"
 date: 2026-04-01 00:01:00 +0800
-selected: false
+selected: true
 status: published
 status_label: Published
 index_badges:
