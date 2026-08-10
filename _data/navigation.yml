@@ -6,11 +6,5 @@ pages:
 - name: Publications
   url: /publications
 
-- name: Talks
-  url: /talks
-
 - name: Competitions
   url: /competitions
-
-- name: Projects
-  url: /projects

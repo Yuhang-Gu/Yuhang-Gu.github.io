@@ -4,7 +4,4 @@ homepage:
 
   show_selected_publications: true
   show_selected_competitions: true
-  show_selected_talks: true
-
-  show_visitor_statistics: true
   num_news: 7
