@@ -359,6 +359,12 @@ h6.border-bottom i {
     font-weight: 700;
 }
 
+.publication-card-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
 .publication-item .row {
     transition: background-color 180ms ease;
 }
