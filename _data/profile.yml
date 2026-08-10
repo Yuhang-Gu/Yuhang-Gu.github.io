@@ -3,108 +3,67 @@ secondary_name: "Gu"
 navbar_name: "Homepage"
 
 positions:
-- name: Undergraduate Student, Tianjin University of Science and Technology
+  - name: Undergraduate Student, Tianjin University of Science and Technology
+    logo: /assets/images/badges/天津科技大学-logo-2048px.png
 
 email: "23080303@mail.tust.edu.cn"
 
-# Add a CV link after uploading Yuhang Gu's current CV.
-# cv_link: /assets/CV/cv.pdf
+cv_link: /assets/CV/cv.pdf
 
-# Google Scholar ID
-# 等你有自己的 Google Scholar 主页后再填写
 gscholar: ibLy1ZYAAAAJ
 github: Yuhang-Gu
-
-# Optional social profiles
-# twitter:
-# linkedin:
 orcid: 0009-0000-9450-2519
+
 xiaohongshu: https://www.xiaohongshu.com/user/profile/636a60e9000000001f01968b
 
-# 如果以后上传自己的微信二维码，可以保留
 wechat_qrcode: /assets/images/etc/wechat.jpg
 wechat_prompt: >-
- Please tell me your name, affiliation, and reason for contacting me. Thanks!
+  Please tell me your name, affiliation, and reason for contacting me. Thanks!
 
+portrait_url: /assets/images/photos/profile.jpg
+portrait_caption: "Yuhang Gu"
+
+research_diagram: /assets/images/etc/research-framework.png
 
 short_bio_text_justify: true
 
 short_bio: >-
   <p>
-    My research lies at the intersection of
+    I am interested in interdisciplinary research at the intersection of
     <strong>management science</strong>,
     <strong>operations research</strong>,
-    <strong>mathematical modeling</strong>, and
-    <strong>artificial intelligence</strong>.
-    I am interested in understanding how mathematical, computational,
-    and data-driven methods can support modeling, decision-making,
-    and optimization in complex systems.
-  </p>
-
-  <p>
-    My work spans both <strong>management decision-making</strong> and
+    <strong>mathematical modeling</strong>,
+    <strong>artificial intelligence</strong>, and
     <strong>engineering optimization</strong>.
-    Methodologically, I am particularly interested in
-    contract theory and game-theoretic modeling,
-    optimization and scientific computing,
-    surrogate modeling, dimensionality reduction,
-    and AI-driven computational methods.
-    These tools provide a common framework for studying strategic decisions,
-    resource allocation, system design, and high-dimensional optimization problems.
+    My research seeks to understand how mathematical, computational, and
+    data-driven methods can support intelligent decision-making and optimization
+    for complex systems.
   </p>
 
   <p>
-    My current research increasingly focuses on
-    <strong>data- and physics-informed intelligent optimization for engineering systems</strong>.
-    In particular, I study aerodynamic design and optimization of turbomachinery,
-    including compressor blade optimization,
-    surrogate-assisted optimization,
-    physics- and knowledge-guided optimization,
-    and the use of causal inference to understand the relationships between
-    flow physics and aerodynamic performance.
+    On the management science side, I am interested in
+    <strong>contract theory, game theory, mechanism design, and resource allocation</strong>.
+    On the computational side, I focus on
+    <strong>scientific computing, surrogate modeling, dimensionality reduction,
+    optimization algorithms, and AI-driven methods</strong>.
+    These methodological perspectives provide a common foundation for studying
+    both management decision problems and engineering design problems.
   </p>
 
   <p>
-    More broadly, I am interested in bridging
-    <strong>management science and engineering design</strong>
-    through interpretable mathematical models and intelligent computational methods,
-    with the goal of developing efficient, reliable, and explainable approaches
-    for complex decision and optimization problems.
+    My current engineering research focuses on
+    <strong>data- and physics-informed intelligent optimization</strong>,
+    particularly for turbomachinery aerodynamic design.
+    Recent topics include compressor blade optimization,
+    surrogate-assisted optimization, physics- and knowledge-guided optimization,
+    and causal inference for understanding the relationship between
+    flow-field characteristics and aerodynamic performance.
   </p>
 
-
-portrait_url: /assets/images/photos/profile.jpg
-
-portrait_caption: >-
-  Yuhang Gu
-
-
-education:
-
-- name: Tianjin University of Science and Technology
-  position: B.M. in Logistics Management
-  date: Sep. 2023 - Jun. 2027
+collaboration_text: >-
+  I am always interested in exchanging ideas and exploring potential collaborations
+  in management science, operations research, intelligent optimization,
+  scientific computing, and AI-driven engineering design.
 
 
-experience:
-
-- name: Compressor Aerodynamic Optimization Research
-  position: Undergraduate Researcher
-  date: 2025 - Present
-
-- name: Turbomachinery Aerodynamic Design Project
-  position: Research Project Participant
-  date: 2026 - Present
-
-
-awards:
-
-- name: National Scholarship
-  date: 2023
-
-- name: Tianjin Municipal Government Scholarship
-  date: 2024
-
-- name: Innovation Scholarship
-  date: 2024
 
