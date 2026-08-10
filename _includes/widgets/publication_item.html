@@ -11,7 +11,12 @@
         <div class="col-md-7 col-xl-8 p-3 pl-md-0">
             <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
             <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+            {% if item.pub or item.pub_date %}<p class="mt-0 mb-1 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>{% endif %}
+            <div class="publication-badges mb-2">
+                {% if item.status_label %}<span class="publication-status status-{{ item.status }}">{{ item.status_label }}</span>{% endif %}
+                {% if item.role_badge %}<span class="publication-meta-badge">{{ item.role_badge }}</span>{% endif %}
+                {% for badge in item.index_badges %}<span class="publication-meta-badge">{{ badge }}</span>{% endfor %}
+            </div>
             <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
             
             <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
@@ -35,7 +40,12 @@
             <div>
                 <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
                 <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+                {% if item.pub or item.pub_date %}<p class="mt-0 mb-1 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>{% endif %}
+                <div class="publication-badges mb-2">
+                    {% if item.status_label %}<span class="publication-status status-{{ item.status }}">{{ item.status_label }}</span>{% endif %}
+                    {% if item.role_badge %}<span class="publication-meta-badge">{{ item.role_badge }}</span>{% endif %}
+                    {% for badge in item.index_badges %}<span class="publication-meta-badge">{{ badge }}</span>{% endfor %}
+                </div>
                 <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
                 
                 <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
