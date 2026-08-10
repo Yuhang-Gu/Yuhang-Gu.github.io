@@ -5,7 +5,7 @@ date: 2025-12-27 00:01:00 +0800
 event_date: "December 27–28, 2025"
 location: "Southeast University, Jiulonghu Campus · Nanjing"
 role_type: presented
-selected: false
+selected: true
 cover: assets/images/talks/2025-multi-chain-workshop.jpg
 image_alt: "Yuhang Gu at the Multi-Chain Integration and Innovation System Optimization workshop"
 ---
