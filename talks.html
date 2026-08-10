@@ -1,0 +1,34 @@
+---
+layout: default
+title: Talks & Presentations
+navbar_title: Talks
+---
+
+{% assign talks = site.talks | sort: "date" | reverse %}
+{% assign talks_by_year = talks | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+<header class="page-intro pt-3 pb-2">
+    <p class="section-kicker">Academic exchange</p>
+    <h1>Talks &amp; Presentations</h1>
+    <p>Conference presentations, co-authored presentations, and selected academic meetings. Each entry states my role explicitly.</p>
+</header>
+
+<div class="talk-legend" aria-label="Role legend">
+    <span><i class="legend-dot legend-presented"></i> Presented by Yuhang Gu</span>
+    <span><i class="legend-dot legend-coauthor"></i> Presented by a co-author</span>
+    <span><i class="legend-dot legend-attended"></i> Attendee only</span>
+</div>
+
+{% for year in talks_by_year %}
+<section class="talk-year" id="talks-{{ year.name }}">
+    <div class="section-heading">
+        <div><span class="section-number">{{ year.name }}</span><h2>{{ year.name }}</h2></div>
+        <span class="section-count">{{ year.items.size }} records</span>
+    </div>
+    <div class="talk-list">
+        {% for item in year.items %}
+            {% include widgets/talk_item.html item=item %}
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}

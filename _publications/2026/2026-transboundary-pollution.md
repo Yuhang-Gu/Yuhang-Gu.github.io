@@ -3,6 +3,11 @@ title: "Cost-sharing eco-compensation for transboundary pollution control: a dif
 
 date: 2026-07-01 00:01:00 +0800
 selected: true
+status: published
+status_label: Published
+role_badge: First Author
+index_badges:
+  - SCIE Q2
 
 pub: "Frontiers in Environmental Science"
 pub_date: "2026"

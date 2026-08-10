@@ -3,29 +3,70 @@ layout: default
 title : Publications
 navbar_title: Publications
 body_attr: >-
-  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+  data-spy="scroll" data-target="#navbar-publication-status" data-offset="100"
 ---
 
-{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign all_publications = site.publications | sort: "date" | reverse %}
+{% assign published = all_publications | where: "status", "published" %}
+{% assign revision = all_publications | where: "status", "revision" %}
+{% assign working = all_publications | where: "status", "working" %}
 
 <div class="row">
     <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+        <header class="page-intro pt-3 pb-2">
+            <p class="section-kicker">Research output</p>
+            <h1>Publications</h1>
+            <p>Published work, manuscripts under revision, and ongoing working papers across management science and engineering optimization.</p>
+        </header>
+
+        {% if published.size > 0 %}
+        <section id="published" class="publication-section">
+        <div class="section-heading">
+            <div><span class="section-number">01</span><h2>Published &amp; Forthcoming</h2></div>
+            <span class="section-count">{{ published.size }} papers</span>
+        </div>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            {% for item in year.items %}
+            {% for item in published %}
                 {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
             {% endfor %}
         </div>
-        {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if revision.size > 0 %}
+        <section id="revision" class="publication-section">
+        <div class="section-heading">
+            <div><span class="section-number">02</span><h2>Under Review &amp; Revision</h2></div>
+            <span class="section-count">{{ revision.size }} papers</span>
+        </div>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            {% for item in revision %}
+                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% endfor %}
+        </div>
+        </section>
+        {% endif %}
+
+        {% if working.size > 0 %}
+        <section id="working-papers" class="publication-section">
+        <div class="section-heading">
+            <div><span class="section-number">03</span><h2>Working Papers</h2></div>
+            <span class="section-count">{{ working.size }} papers</span>
+        </div>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            {% for item in working %}
+                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% endfor %}
+        </div>
+        </section>
+        {% endif %}
     </div>
 
     <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
+        <div id="navbar-publication-status" class="nav nav-pills flex-column sticky-top section-nav" style="top: 80px">
+            <a class="nav-link d-block" href="#published">Published</a>
+            <a class="nav-link d-block" href="#revision">Revision</a>
+            <a class="nav-link d-block" href="#working-papers">Working Papers</a>
         </div>
     </div>
 
