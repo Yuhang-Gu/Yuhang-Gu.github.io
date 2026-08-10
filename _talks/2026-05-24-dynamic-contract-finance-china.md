@@ -6,7 +6,7 @@ event_date: "May 24, 2026"
 location: "Central University of Finance and Economics · Beijing"
 role_type: presented
 award: First Prize
-selected: true
+selected: false
 cover: assets/images/talks/2026-finance-china-presentation.jpg
 image_alt: "Yuhang Gu presenting Dynamic Contract Mechanisms at the Finance China Youth Academic Forum"
 gallery:
