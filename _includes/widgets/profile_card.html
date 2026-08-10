@@ -37,9 +37,23 @@
                             {{ position.name }}<br/>
                             {% endfor %}
                         </div>
-                        <div class="text-profile-bio mt-3" {% if site.data.profile.short_bio_text_justify %}style="text-align: justify;"{% endif %}>
+                        <div class="text-profile-bio mt-3"
+                             {% if site.data.profile.short_bio_text_justify %}
+                             style="text-align: justify;"
+                             {% endif %}>
+                        
+                            {% if site.data.profile.research_diagram %}
+                            <div class="research-framework-figure">
+                                <img
+                                    src="{{ site.data.profile.research_diagram | relative_url }}"
+                                    alt="Interdisciplinary Research Framework">
+                            </div>
+                            {% endif %}
+                        
                             {{ site.data.profile.short_bio }}
+                        
                         </div>
+                        
                         {% if site.data.profile.cv_link %}
                             <a target="_blank" href="{{ site.data.profile.cv_link | relative_url }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
                         {% endif %}
