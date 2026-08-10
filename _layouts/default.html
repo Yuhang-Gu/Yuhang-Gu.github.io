@@ -28,9 +28,13 @@
         
             {% assign hero_competitions = site.competitions
                 | where: "selected", true %}
+
+            {% assign hero_talks = site.talks
+                | where: "selected", true %}
         
             {% assign hero_items = hero_publications
                 | concat: hero_competitions
+                | concat: hero_talks
                 | sort: "date"
                 | reverse %}
         
