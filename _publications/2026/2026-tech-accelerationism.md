@@ -7,7 +7,11 @@ status_label: Published
 index_badges:
   - CSCD
 pub: "世界科技研究与发展"
-pub_date: "2026, 48(2): 180–200"
+pub_date: "2026, 48(2): 180-200"
+cover: assets/images/publications/tech-accelerationism.png
+cover_alt: "Publication page for the article on tech accelerationism and the U.S. innovation paradigm"
+abstract: >-
+  This article examines the drivers, orientations, and internal logic of tech accelerationism and discusses how it is reshaping the U.S. innovation paradigm.
 authors:
   - 邵丽蓉
   - 顾宇航
@@ -16,5 +20,6 @@ authors:
   - 金宇涛
   - 郎元柯
 links:
+  PDF: /assets/files/publications/tech-accelerationism.pdf
   DOI: https://doi.org/10.16507/j.issn.1006-6055.2025.12.001
 ---
