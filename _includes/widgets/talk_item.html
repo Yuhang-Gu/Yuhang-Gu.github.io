@@ -1,17 +1,13 @@
 {% assign item = include.item %}
-<article class="talk-item role-{{ item.role_type }}">
-    <div class="talk-date-block">
-        <span>{{ item.date | date: "%b" }}</span>
-        <strong>{{ item.date | date: "%d" }}</strong>
-        <small>{{ item.date | date: "%Y" }}</small>
-    </div>
-
-    <div class="talk-media{% unless item.cover %} talk-media-empty{% endunless %}">
-        {% if item.cover %}
-        <img src="{{ item.cover | relative_url }}" alt="{{ item.image_alt | default: item.event }}" loading="lazy">
-        {% else %}
-        <i class="fas fa-microphone-lines" aria-hidden="true"></i>
-        {% endif %}
+<article class="talk-item role-{{ item.role_type }} {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %}">
+    <div class="talk-media-column">
+        <div class="talk-cover-frame{% unless item.cover %} talk-media-empty{% endunless %}">
+            {% if item.cover %}
+            <img data-src="{{ item.cover | relative_url }}" src="{{ '/assets/images/empty_300x200.png' | relative_url }}" class="lazy" alt="{{ item.image_alt | default: item.event }}">
+            {% else %}
+            <i class="fas fa-microphone-lines" aria-hidden="true"></i>
+            {% endif %}
+        </div>
     </div>
 
     <div class="talk-content">
@@ -32,14 +28,14 @@
         <div class="talk-links">
             {% for link in item.links %}
                 {% assign link_url = link[1] %}
-                <a href="{{ link_url | relative_url }}" target="_blank"><i class="far fa-file-lines"></i> {{ link[0] }}</a>
+                <a href="{{ link_url | relative_url }}" target="_blank" rel="noopener"><i class="far fa-file-lines"></i> {{ link[0] }}</a>
             {% endfor %}
         </div>
         {% endif %}
         {% if item.gallery %}
         <div class="talk-gallery">
             {% for image in item.gallery %}
-            <a href="{{ image | relative_url }}" target="_blank"><img src="{{ image | relative_url }}" alt="Additional image from {{ item.event }}" loading="lazy"></a>
+            <a href="{{ image | relative_url }}" target="_blank" rel="noopener"><img src="{{ image | relative_url }}" alt="Additional image from {{ item.event }}" loading="lazy"></a>
             {% endfor %}
         </div>
         {% endif %}
