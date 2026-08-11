@@ -2,33 +2,47 @@
 layout: default
 title: Talks & Presentations
 navbar_title: Talks
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-talk-years" data-offset="100"
 ---
 
 {% assign talks = site.talks | sort: "date" | reverse %}
 {% assign talks_by_year = talks | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-<header class="page-intro pt-3 pb-2">
-    <p class="section-kicker">Academic exchange</p>
-    <h1>Talks &amp; Presentations</h1>
-    <p>Conference presentations, co-authored presentations, and selected academic meetings. Each entry states my role explicitly.</p>
-</header>
+<div class="row">
+    <div class="col-12 col-lg-10">
+        <header class="page-intro pt-3 pb-2">
+            <p class="section-kicker">Academic exchange</p>
+            <h1>Talks &amp; Presentations</h1>
+            <p>Conference presentations, co-authored presentations, and academic meetings, arranged in reverse chronological order with my role stated explicitly.</p>
+        </header>
 
-<div class="talk-legend" aria-label="Role legend">
-    <span><i class="legend-dot legend-presented"></i> Presented by Yuhang Gu</span>
-    <span><i class="legend-dot legend-coauthor"></i> Presented by a co-author</span>
-    <span><i class="legend-dot legend-attended"></i> Attendee only</span>
-</div>
+        <div class="talk-legend" aria-label="Role legend">
+            <span><i class="legend-dot legend-presented"></i> Presented by Yuhang Gu</span>
+            <span><i class="legend-dot legend-coauthor"></i> Presented by a co-author</span>
+            <span><i class="legend-dot legend-attended"></i> Attendee only</span>
+        </div>
 
-{% for year in talks_by_year %}
-<section class="talk-year" id="talks-{{ year.name }}">
-    <div class="section-heading">
-        <div><span class="section-number">{{ year.name }}</span><h2>{{ year.name }}</h2></div>
-        <span class="section-count">{{ year.items.size }} records</span>
-    </div>
-    <div class="talk-list">
-        {% for item in year.items %}
-            {% include widgets/talk_item.html item=item %}
+        {% for year in talks_by_year %}
+        <section class="talk-year" id="talks-{{ year.name }}">
+            <div class="section-heading">
+                <div><span class="section-number">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><h2>{{ year.name }}</h2></div>
+                <span class="section-count">{{ year.items.size }} records</span>
+            </div>
+            <div class="talk-list bg-white shadow-sm rounded-sm">
+                {% for item in year.items %}
+                    {% include widgets/talk_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+                {% endfor %}
+            </div>
+        </section>
         {% endfor %}
     </div>
-</section>
-{% endfor %}
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-talk-years" class="nav nav-pills flex-column sticky-top section-nav" style="top: 80px">
+            {% for year in talks_by_year %}
+            <a class="nav-link d-block" href="#talks-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
