@@ -864,6 +864,12 @@ div.lazy {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
+.researcher-id {
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.82em;
+}
+
 .footer {
     margin-top: 3rem;
     padding: 1.5rem 0 2rem;
